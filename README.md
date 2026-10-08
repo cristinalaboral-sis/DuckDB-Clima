@@ -200,13 +200,13 @@ El proyecto cumple con los siguientes requisitos:
 | Tres o más consultas analíticas | Promedios mensuales, conteos, máximos/mínimos, filtrado analítico y media móvil |
 | README con instrucciones | Se documentan instalación, ejecución, dataset, consultas y resultados |
 | Consulta directa sobre archivos | DuckDB utiliza `read_csv_auto()` directamente sobre el CSV |
-| Sin base de datos binaria | No se incluye ni se genera un archivo `.duckdb` como parte del proyecto |
+| Sin base de datos binaria | El proyecto no utiliza una base de datos binaria persistente; DuckDB trabaja mediante una conexión en memoria y consulta directamente el archivo CSV. |
 
 ## Conclusiones
 
 El análisis permitió trabajar con una serie temporal climática utilizando DuckDB y SQL directamente sobre un archivo CSV.
 
-Los resultados muestran una mayor temperatura promedio durante los meses de verano, con febrero como el mes más cálido dentro del período analizado. A partir de junio se observa un descenso de las temperaturas promedio, correspondiente al período invernal.
+Los resultados muestran una mayor temperatura promedio durante los meses de verano, con febrero como el mes más cálido dentro del período analizado. A partir de junio se observan las temperaturas promedio más bajas del período analizado, correspondientes a los meses de invierno.
 
 La utilización de DuckDB permite realizar consultas analíticas sobre archivos de datos sin necesidad de implementar una base de datos tradicional, simplificando el procesamiento y análisis de este tipo de información.
 
